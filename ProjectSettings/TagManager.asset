@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Floor
+  - Plattform
+  - UI
+  - Mouse
+  - DeadMouse
+  - Wand
+  - TagNAcht
+  - EventManager
+  - EndGame
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Floor
+  - Water
+  - UI
+  - Plattform
+  - Enemy
+  - EndGame
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: "R\xE4nder"
+    uniqueID: 2602770025
+    locked: 0
+  - name: Character
+    uniqueID: 2438453163
+    locked: 0
+  - name: UI
+    uniqueID: 512113235
+    locked: 0
+  - name: Foreground
+    uniqueID: 2850621289
+    locked: 0
