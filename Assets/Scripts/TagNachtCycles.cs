@@ -25,6 +25,8 @@ public class TagNachtCycles : MonoBehaviour
     public AudioClip Day;
     public AudioClip Night;
 
+    public GameObject wasserKelle;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -45,13 +47,14 @@ public class TagNachtCycles : MonoBehaviour
         if (isDay)
         {
             tagSprite.enabled = true;
-            
+            wasserKelle.SetActive(true);
         }
         else
         {
             nachtSprite.enabled = true;
             nachtLayer.enabled = true;
-            
+            wasserKelle.SetActive(false);
+
         }
     }
 

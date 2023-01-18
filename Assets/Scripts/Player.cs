@@ -90,14 +90,19 @@ public class Player : MonoBehaviour
         animator.SetFloat("speed", Mathf.Abs(h_speed));
         animator.SetFloat("verticalSpeed", myRigidbody.velocity.y);
         animator.SetBool("grounded", controller2D.getGrounded());
-        if (Input.GetButtonDown("Jump") && energyLevel > energy_per_jump)
+        if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
         
-        if (Input.GetButtonDown("Fire1") && energyLevel > energy_per_attack)
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack();
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Drink();
         }
 
         JumpThroughPlattforms();
@@ -133,7 +138,6 @@ public class Player : MonoBehaviour
             enemy.GetComponent<Enemy>().die();
         }
 
-        energyLevel = energyLevel - energy_per_attack;
 
         Collider2D[] endField = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRange, endLayers);
     }
@@ -142,7 +146,11 @@ public class Player : MonoBehaviour
     {
         jump = true;
         animator.SetBool("jump", true);
-        energyLevel = energyLevel - energy_per_jump;
+    }
+
+    void Drink()
+    {
+        animator.SetTrigger("trinken");
     }
 
     void JumpThroughPlattforms()
